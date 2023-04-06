@@ -1,0 +1,24 @@
+<p>drink-list works!</p>
+<div class="card-grid">
+    <div class="card" *ngFor="let drink of drinks$ |async">
+        <div class="card-header">
+           {{drink.name}}
+        </div>
+        <div class="card-header card-image">
+            <img [src]="drink.imageUrl" />
+            <!--*ngFor="let food of ingredients?.ingredient"-->
+        </div>
+        <div class="card-body"   >
+          {{drink.ingredients}}
+          
+            <div class="card-footer">
+                <button class="btn" [routerLink]="['food', drink._id]">Details</button>
+                <button class="btn btn-outline" (click)="onAddCart(drink)"
+                ><fa-icon style="font: size 69px;" [icon]="ShoppingCart"></fa-icon> {{drink.price}}</button>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

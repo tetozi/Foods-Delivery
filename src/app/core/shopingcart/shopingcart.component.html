@@ -1,0 +1,45 @@
+<!--<div class="warpper">
+    <h1>Shoping Cart</h1>
+    <div class="project" *ngFor="let item of dataSource" >
+        <div class="shopingImage">
+           <img [src]="item.imageUrl" />
+        </div>
+        <div class="content">
+            <h3>{{item.name}}</h3>
+            <div class="quantity">
+             
+                <button class="unit" value="{{item.quantity}}">Quantity:<input>{{item.quantity}}</button>
+                <h4>{{item.quantity * item.price}}</h4>
+                <span></span>
+            </div>
+            <div class="btn-position">
+                <button class="btn-area"(click)="onRemoveFromCart(item)">
+                    <fa-icon style="font: size 69px;" [icon]="trash"></fa-icon><span class="btn2">Remove</span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    {{getTotal(cart.items)}}
+</div> -->
+
+
+
+
+
+<div class="shopping-cart">
+    <h1>Shoping Cart</h1>
+  <ul *ngFor="let item of dataSource" >
+    <li>
+        <img [src]="item.imageUrl" alt="product-image" class="item-image">
+      <span class="item-name">{{item.name}}</span>
+      <p class="item-price">{{item.quantity * item.price}}</p>
+      <button class="btn btn-minus" (click)="onRemoveQuantity(item)">-</button>
+      <span class="item-quantity">{{item.quantity}}</span>
+      <button class="btn btn-plus" (click)="onAddQuantity(item)">+</button>
+    </li>
+
+  </ul>
+  <div> {{getTotal(cart.items)}}</div>
+  <button (click)="onCheckOut()">Checkout</button>
+</div>

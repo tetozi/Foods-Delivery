@@ -1,0 +1,43 @@
+<p>update-food works!</p>
+<div class="full-screen-container">
+    <div class="login-container"*ngIf="food$ | async as food">
+      <h1 class="login-title">Update </h1>
+      <form class="form" #f="ngForm" (ngSubmit)="loginHandler(f.value)">
+
+
+        <div class="input-group success">
+          <label for="id">Id</label>
+          <input type="text" name="id" id="id" class="form-control" [(ngModel)]="food._id">
+          <span class="msg">Valid iD</span>
+        </div>
+ 
+        <div class="input-group success">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" [(ngModel)]="food.name">
+          <span class="msg">Valid email</span>
+        </div>
+ 
+       
+        <div class="input-group success">
+          <label for="ingredients">Ingredients</label>
+          <input type="text" name="ingredients" id="ingredients" class="form-control" [(ngModel)]="food.ingredients" >
+          <span class="msg">Valid email</span>
+        </div>
+  
+  
+        <div class="input-group error">
+          <label for="imageUrl">Image</label>
+          <input type="text" name="imageUrl" id="imageUrl" class="form-control" [(ngModel)]="food.imageUrl" >
+          <span class="msg">Missing image url</span>
+        </div>
+  
+        <div class="input-group error">
+          <label for="price">Price</label>
+          <input type="number" name="price" id="price" class="form-control"[(ngModel)]="food.price">
+        </div>
+  
+  
+        <button type="submit" class="login-button">Update</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,63 @@
+body{
+    display: flex;
+  justify-content: center;
+}
+
+
+
+p{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.admin-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9rem;
+    min-width: 400px;
+}
+
+.admin-table thead tr{
+    background-color: grey;
+    text-align: left;
+    font-weight: bold;
+}
+
+.admin-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.admin-table th,
+.admin-table td{
+    padding: 12px 15px;
+}
+
+
+.update-button {
+    padding: .5em 1em;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+     background-color: rgb(38, 118, 118);
+    border: 1px solid hsl(var(--primary-hsl));
+    border-radius: .25em;
+    outline: none;
+    cursor: pointer;
+  }
+
+
+  .delete-button{
+    padding: .5em 1em;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+     background-color: rgb(190, 27, 12);
+    border: 1px solid hsl(var(--primary-hsl));
+    border-radius: .25em;
+    outline: none;
+    cursor: pointer;
+}

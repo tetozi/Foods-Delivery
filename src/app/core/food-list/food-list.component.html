@@ -1,0 +1,23 @@
+<div class="card-grid">
+    <div class="card" *ngFor="let food of foods$ |async">
+        <div class="card-header">
+           {{food.name}}
+        </div>
+        <div class="card-header card-image">
+            <img [src]="food.imageUrl" />
+            <!--*ngFor="let food of ingredients?.ingredient"-->
+        </div>
+        <div class="card-body"   >
+          {{food.ingredients}}
+          
+            <div class="card-footer">
+                <button class="btn" [routerLink]="['food', food._id]">Details</button>
+                <button class="btn btn-outline" (click)="onAddCart(food)"
+                ><fa-icon style="font: size 69px;" [icon]="ShoppingCart"></fa-icon> {{food.price}}</button>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="full-screen-container" *ngIf="food$ | async as food">
+   <h2 class="header">{{food.name}}</h2> 
+   <div class="main">
+
+      <img class="img" [src]="food.imageUrl" />
+     
+       <p class="mainText">The pizza was really good. It took me to new york,
+          lol. I love cheesy pizza with a lot of tomato sauce,
+           and it was just that also. It was at a budget-friendly 
+           price.So it's really good for the price.</p>
+   </div>
+   <div class="bottom">
+
+      <p class="ingredients">Ingredients: {{food.ingredients}}</p>
+      <button class="btn">{{food.price}}</button>
+   </div>
+</div>

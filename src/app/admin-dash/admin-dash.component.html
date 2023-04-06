@@ -1,0 +1,23 @@
+<p>Admin Dashboard</p>
+<body>
+    
+    
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let food of foods$ |async">
+              <td><img class ="admin-image"[src]="food.imageUrl" /></td>
+              <td> {{food.name}}</td>
+              <td>{{food.price}}</td>
+              <td><button class="update-button" [routerLink]="['update', food._id]" >Update</button></td>
+              <td><button class="delete-button" [routerLink]="['delete', food._id]"><fa-icon style="font: size 69px;" [icon]="trash"></fa-icon>Delete</button></td>
+        </tbody>
+    </table>
+</body>

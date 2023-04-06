@@ -1,0 +1,44 @@
+<div class="full-screen-container">
+  <div class="login-container">
+    <h1 class="login-title">Create Pizza</h1>
+    <form class="form" [formGroup]="form" (ngSubmit)="createFood()">
+      <div class="input-group success">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" formControlName="name">
+        <span class="msg">Valid email</span>
+      </div>
+      <!--<span class="msg" *ngIf="form.get('ingingridients').touched && form.get('ingridients').errors.required">Valid email</span> -->
+       <!--i <div formArrayName="ingredients">
+        <div class="input-group error " *ngFor="let ingredient of ingredients.controls;let i=index"
+          [formGroupName]="i ">
+          <label for="ingredients">Ingridients</label>
+          <input type="text" formControlName="ingredient"> >
+          <span class="msg">Required ingridients</span>
+        </div>
+        <button type="button" (click)="onAddIngridients()" class="login-button">Add Ingridient</button>
+      </div>-->
+     
+      <div class="input-group success">
+        <label for="ingredients">Name</label>
+        <input type="text" name="ingredients" id="ingredients" formControlName="ingredients">
+        <span class="msg">Valid email</span>
+      </div>
+
+
+      <div class="input-group error">
+        <label for="imageUrl">Image</label>
+        <input type="text" name="image" id="imageUrl" formControlName="imageUrl">
+        <span class="msg">Missing image url</span>
+      </div>
+
+      <div class="input-group error">
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" formControlName="price">
+        <span class="msg">You need to put a price</span>
+      </div>
+
+
+      <button type="submit" class="login-button">Create</button>
+    </form>
+  </div>
+</div>

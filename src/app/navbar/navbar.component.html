@@ -1,0 +1,31 @@
+<body>
+    <nav class="navbar">
+      <div class="brand-title" >Take Away</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li *ngIf="isAdmin">
+            <a routerLink="admin">admin-dash</a>
+          </li>
+        
+          <li>
+            <a routerLink="">Home</a></li>
+            <li *ngIf="isLogged"
+            ><a routerLink="createFood">Create Food</a>
+          </li>
+            <li *ngIf="isLogged">
+              <a (click)="logout()">Logout</a></li>
+              <li *ngIf="isUser">
+              <a routerLink="shopingcart">  <fa-icon style="font: size 69px;" [icon]="ShoppingCart"></fa-icon> </a></li>
+          <li *ngIf="!isLogged"
+          ><a routerLink="login">Login</a></li>
+          <li *ngIf="!isLogged">
+            <a  routerLink="register">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+  </body>
